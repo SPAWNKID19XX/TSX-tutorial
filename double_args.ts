@@ -19,16 +19,11 @@ type Shape = Rectangle|Circle|Square
 function calc_area(shape: Shape): number | string {
     let res:number | string
     let pi: number = 3.14
-    if (shape.shape === "circle") {
-        res = pi*(shape.radius**2)
-    } else if (shape.shape === "square") {
-        res = shape.side ** 2
-    } else if (shape.shape === "rectangle") {
-        res = shape.length * shape.height
-    } else {
-        res ="Unknown shape"
+    switch (shape.shape) {
+        case "circle": return pi*(shape.radius**2);
+        case "square": return shape.side ** 2;
+        case "rectangle": return shape.length * shape.height
     }
-    return res
 }   
 
 const myRect: Rectangle = {
