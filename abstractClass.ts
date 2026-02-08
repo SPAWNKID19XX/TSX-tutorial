@@ -16,3 +16,17 @@ abstract class Person {
 
     abstract increasePay(percent:number): void;
 }
+
+class Emplloyeer extends Person {
+    increasePay(percent:number){
+        console.log(`increasing to ${this.name} ${percent}%`);
+    }
+}
+
+class Contractor extends Person {
+    increasePay(percent:number){
+        console.log(`Increasing the hourly rate of ${this.name} by ${percent}%`);
+    }
+}
+
+
