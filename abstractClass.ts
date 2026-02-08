@@ -2,7 +2,7 @@ abstract class Person {
     constructor(public name: string) { }
 
     changeAddres (newAddres:string) {
-        console.log(`Adress has been changed for ${this.name}` );
+        console.log(`Adress has been changed for ${this.name} for ${newAddres}` );
     }
 
     giveDayOff () {
@@ -29,4 +29,12 @@ class Contractor extends Person {
     }
 }
 
+const workers: Person[] = []
+
+workers[0]= new Emplloyeer("Boris")
+workers[1]= new Contractor("Aaron")
+
+workers.forEach(worker => worker.promote(5))
+
+console.log(workers);
 
